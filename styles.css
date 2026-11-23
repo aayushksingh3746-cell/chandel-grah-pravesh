@@ -17,3 +17,70 @@ html[lang="hi"] body{font-family:'Noto Serif Devanagari',serif;line-height:1.85}
 @media(min-width:600px){body{padding:28px 18px 50px;background:#4A0E0E}.invitation{border-radius:3px;overflow:hidden}.paper-border{border:0}.hero{padding-top:66px}.control-wrap{top:17px}.splash::before{inset:22px}.splash::after{inset:40px}}
 @media(max-width:380px){.section-pad{padding-left:24px;padding-right:24px}.hero{padding-top:48px}.event-card{padding:14px 12px}.event-date{font-size:9px}.birthday-card{padding-left:16px;padding-right:16px}.date-ribbon{font-size:9px;gap:6px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js-ready .reveal{opacity:1;transform:none}}
+
+/* ROYAL EDITION — visual refinement inspired by the supplied invitation reference */
+:root{--night:#210609;--night-2:#31090d;--night-3:#401014;--antique-gold:#c7a45b;--gold-light:#f0d99a}
+html{background:var(--night)}
+body{background:var(--night);color:#f6ead2}
+.ambient-pattern{opacity:.08;background-image:radial-gradient(ellipse at center,transparent 0 38%,#c89b3c 38.2%,transparent 38.6%),repeating-linear-gradient(45deg,transparent 0 18px,rgba(235,210,140,.12) 19px,transparent 20px 38px);background-size:180px 180px,100px 100px}
+.invitation{width:min(100%,1100px);background:var(--night);box-shadow:0 28px 100px #090103;}
+.paper-border{background:var(--night);border:0;color:#f4e8d0}
+.paper-border:before{inset:10px;border-color:rgba(199,164,91,.17)}
+.paper-border:after{display:none}
+.corner-ornament{display:none}
+.section-pad{padding-left:clamp(24px,6vw,76px);padding-right:clamp(24px,6vw,76px)}
+.hero{min-height:660px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:88px;padding-bottom:72px;color:#f8edcf;background:radial-gradient(ellipse at 50% 34%,rgba(147,91,36,.32),transparent 52%),linear-gradient(180deg,rgba(20,4,5,.48),rgba(31,5,8,.9)),repeating-linear-gradient(90deg,transparent 0 7%,rgba(201,157,79,.10) 7.2%,transparent 7.5% 16%),linear-gradient(90deg,#180507,#49200f 13%,#24100b 20%,#180507 50%,#24100b 80%,#49200f 87%,#180507)}
+.hero:before{content:"";position:absolute;inset:22px 18px 18px;border:1px solid rgba(220,184,105,.44);outline:1px solid rgba(220,184,105,.15);outline-offset:7px;pointer-events:none;background:linear-gradient(90deg,rgba(11,3,4,.58),transparent 17%,transparent 83%,rgba(11,3,4,.58)),repeating-linear-gradient(90deg,transparent 0 12%,rgba(220,184,105,.09) 12.2%,transparent 12.5% 24%);}
+.hero:after{content:"";position:absolute;top:0;left:8%;right:8%;height:88px;border-bottom:1px solid rgba(220,184,105,.45);border-radius:0 0 50% 50%;background:repeating-linear-gradient(90deg,transparent 0 24px,rgba(220,184,105,.17) 25px 27px,transparent 28px 48px);opacity:.65;pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero-invocation{color:#e9ce8b}.hero-crest{color:#d9b96e;filter:drop-shadow(0 0 18px #c69b4855)}
+.eyebrow,.section-kicker{color:#d6b66e;letter-spacing:.22em}
+.arch-title h1{color:#f2dfae;text-shadow:0 3px 22px #0009}.arch-title h1 em{color:#d8ad55}.arch-title:before,.arch-title:after{border-color:rgba(218,183,105,.42)}
+.arch-bottom{background:transparent;color:#e5c77e}
+.hero-message{color:#eadfc9;max-width:560px;font-size:14px}
+.date-ribbon{background:linear-gradient(110deg,#8e6727,#e7ca7b,#a97b30);border-color:#f0d99a;color:#32100b;padding:12px 20px;font-weight:600}
+.countdown-block{margin-top:40px}.countdown-heading{color:#d7b86f}.count-tile{background:rgba(20,4,6,.45);border:1px solid rgba(211,174,94,.5);box-shadow:inset 0 0 0 3px rgba(255,255,255,.025)}.count-tile strong{color:#f2d78d}.count-tile span,.countdown-message{color:#e6d5b5}.scroll-cue{color:#d3b36c}
+.lotus-divider{padding-top:22px;padding-bottom:22px;color:#b9924b}.lotus-divider span{background:linear-gradient(90deg,transparent,rgba(199,164,91,.5))}.lotus-divider span:last-child{background:linear-gradient(90deg,rgba(199,164,91,.5),transparent)}
+.family{margin:24px clamp(18px,5vw,58px);padding:46px clamp(20px,5vw,60px);background:#fbf6eb;color:#34251c;border:1px solid #d2b56e;box-shadow:0 18px 50px #09010366;position:relative}.family:before{content:"";position:absolute;inset:9px;border:1px solid rgba(176,132,49,.45);pointer-events:none}.family h2,.celebrations h2,.venue h2,.memories h2{color:#f0dfb8}.family h2{color:#4c1715}.family .section-kicker{color:#99732e}.family-tier h3{color:#4b2019}.tier-label{color:#99732e}.tier-symbol{color:#b58a3b}.tier-line{background:linear-gradient(90deg,transparent,#c8a65d,transparent)}
+.rama-section{margin:0 clamp(18px,5vw,58px);padding:34px clamp(18px,4vw,46px);display:grid;grid-template-columns:minmax(150px,260px) 1fr;align-items:center;gap:30px;text-align:left;border:1px solid rgba(199,164,91,.24);background:linear-gradient(115deg,rgba(255,255,255,.025),transparent)}.rama-section .section-kicker{grid-column:2;grid-row:1;margin:0 0 -18px}.rama-arch{grid-column:1;grid-row:1 / span 3;width:100%;max-width:260px;margin:0}.rama-caption{grid-column:2;grid-row:2;color:#f0d99a;margin:0;font-size:25px}.rama-subcaption{grid-column:2;grid-row:3;color:#d8c6a6;font-size:14px}
+.celebrations{padding-top:48px;padding-bottom:48px}.celebrations h2,.venue h2,.memories h2{margin-bottom:12px}.section-intro{color:#d8c7a8;max-width:520px}.event-card{background:linear-gradient(145deg,#2b0b0e,#210609);border:1px solid rgba(199,164,91,.42);color:#f2e6ce;padding:22px;margin:15px 0;box-shadow:0 12px 28px #0c020344}.event-card:before{border-color:rgba(199,164,91,.12)}.event-date{color:#cdbb9a}.day-badge{color:#f0d48a}.event-rule{background:linear-gradient(90deg,#c9a65d,transparent)}.event-list li{color:#f1e4cb}.event-bullet{color:#e0bf70}
+.birthday-card{background:linear-gradient(135deg,#4a1718,#26080b);border:1px solid #c59d51;color:#f3e7ce}.birthday-heading,.birthday-card h3{color:#f2d994}.birthday-text{color:#e3d1b2}.birthday-date{color:#e6c578}
+.venue{padding-top:48px;padding-bottom:52px}.venue-card{max-width:680px;margin:auto;background:linear-gradient(145deg,#2b0b0e,#210609);border-color:rgba(199,164,91,.55);box-shadow:inset 0 0 0 4px rgba(255,255,255,.02)}.venue-card h3{color:#f0d99a}.venue-address{color:#e8d8bc}.venue-emblem{color:#e4c77e;border-color:#b8914b}
+.memories{text-align:center;padding-top:46px;padding-bottom:50px;border-top:1px solid rgba(199,164,91,.24);border-bottom:1px solid rgba(199,164,91,.24)}.memories-intro{color:#d8c7a8;font:italic 13px var(--serif);margin:0 auto 25px}.memory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.memory-tile{min-height:140px;padding:20px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;border:1px solid rgba(199,164,91,.45);background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.008));}.memory-tile span{font-size:25px;color:#d9b96e}.memory-tile b{font:600 12px var(--display);color:#f0d99a}.memory-tile small{font:10px/1.6 var(--serif);color:#d8c7a8}
+.footer{padding-top:54px;padding-bottom:62px;background:radial-gradient(ellipse at 50% 0%,rgba(151,91,37,.15),transparent 65%)}.footer-invocation{color:#e5c77e}.footer-quote{color:#e7d7bb;font-size:18px;max-width:480px}.footer-signoff{color:#f0d99a}.footer small{color:#bfa36a}
+.control-bar{background:rgba(36,7,10,.92);border-color:rgba(199,164,91,.6)}.language-switch .lang-choice{color:#e9d9b7}.language-switch .lang-choice.active{background:#b48b3f;color:#210609}.music-button{background:#2d0b0e;color:#f0d99a;border-color:#b48b3f}
+@media(min-width:700px){.hero{min-height:760px}.celebrations{display:grid;grid-template-columns:1fr 1fr;column-gap:18px}.celebrations>.section-kicker,.celebrations>h2,.celebrations>.section-intro,.celebrations>.birthday-card{grid-column:1/-1}.event-card{height:100%;margin:10px 0 20px}.birthday-card{margin-top:12px}.memory-grid{gap:18px}}
+@media(max-width:560px){.hero{min-height:640px}.rama-section{grid-template-columns:112px 1fr;gap:18px;padding:25px 17px}.rama-arch{width:100%;}.rama-caption{font-size:19px}.rama-subcaption{font-size:12px}.memory-grid{grid-template-columns:repeat(2,1fr)}.memory-tile{min-height:120px}.family{margin:18px 12px;padding:36px 22px}.celebrations{padding-top:35px;padding-bottom:35px}}
+@media(prefers-reduced-motion:reduce){.hero:before,.hero:after{animation:none!important}}
+
+/* Hero photograph: the family's ceremonial entrance image */
+.hero{
+  background-image:
+    linear-gradient(180deg,rgba(19,5,5,.36) 0%,rgba(24,5,7,.52) 43%,rgba(31,5,8,.88) 100%),
+    linear-gradient(90deg,rgba(15,4,5,.40),rgba(15,4,5,.06) 48%,rgba(15,4,5,.40)),
+    url('assets/griha-pravesh-entrance.png');
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-color:#180507;
+}
+.hero:before{
+  background:linear-gradient(180deg,rgba(12,3,4,.12),rgba(12,3,4,.08) 45%,rgba(12,3,4,.36));
+  border:1px solid rgba(220,184,105,.48);
+  outline:1px solid rgba(220,184,105,.16);
+  outline-offset:7px;
+}
+.hero-invocation,.hero .eyebrow,.hero .section-kicker{color:#f2d991;text-shadow:0 2px 12px rgba(0,0,0,.8)}
+.hero .arch-title h1{color:#fff0c7;text-shadow:0 3px 18px rgba(0,0,0,.9)}
+.hero .arch-title h1 em{color:#f1c96e}
+.hero .arch-bottom{background:rgba(35,9,9,.72);color:#f2d991;text-shadow:0 2px 8px #000}
+.hero .hero-message{color:#fff2df;text-shadow:0 2px 12px rgba(0,0,0,.95)}
+.hero .date-ribbon{box-shadow:0 5px 24px rgba(0,0,0,.28)}
+.hero .countdown-heading{color:#f2d991;text-shadow:0 2px 10px #000}
+.hero .count-tile{background:rgba(32,8,8,.78);border-color:rgba(225,190,112,.72);box-shadow:inset 0 0 0 2px rgba(255,245,220,.08),0 5px 20px rgba(0,0,0,.22)}
+.hero .count-tile strong{color:#ffe6a3}
+.hero .count-tile span,.hero .countdown-message,.hero .scroll-cue{color:#fff0ce;text-shadow:0 2px 8px #000}
+@media(max-width:560px){
+  .hero{min-height:700px;background-position:center center;padding-top:82px;padding-bottom:58px}
+  .hero:before{inset:14px 12px 14px;outline-offset:4px}
+}

@@ -19,3 +19,6 @@ Upload the complete folder to GitHub and connect the repository to Vercel (Frame
 After deployment, replace `YOUR-VERCEL-DOMAIN` in the Open Graph URL and image tags in `index.html` with the real deployed domain. Social preview crawlers generally require an absolute, publicly accessible image URL.
 
 The date countdown is locked to India Standard Time (UTC+05:30). Event timings are intentionally omitted.
+
+### Hero entrance photograph
+The supplied ceremonial doorway photograph is included at `assets/griha-pravesh-entrance.png` and is used as the background image of the hero section. Keep this file in the same relative path when deploying.

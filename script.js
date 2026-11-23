@@ -24,7 +24,9 @@
       venueKicker:"WE LOOK FORWARD TO WELCOMING YOU",venueHeading:"Venue",venueTitle:"Chandel Residence",
       venueAddress:"Kha-103, 593/KN/103-A, Village Shakurpur, Lucknow, Uttar Pradesh – 226002",
       callButton:"Call +91 9235228454",footerQuote:"Your gracious presence and blessings are our greatest gift.",
-      footerSignoff:"Warm Regards, Chandel Family"
+      footerSignoff:"Warm Regards, Chandel Family",
+      memoriesKicker:"ROOTED IN LOVE · UNITED IN BLESSINGS",memoriesTitle:"Cherished Family Moments",memoriesIntro:"A home is made beautiful by the people and blessings within it.",
+      memory1Title:"Our Elders",memory1Text:"Wisdom, prayers & blessings",memory2Title:"Our Family",memory2Text:"Togetherness through every chapter",memory3Title:"Our Faith",memory3Text:"A home filled with devotion",memory4Title:"New Beginnings",memory4Text:"Love, laughter & new memories"
     },
     hi: {
       pageTitle:"चंदेल परिवार — गृह प्रवेश एवं अखंड रामायण निमंत्रण",
@@ -49,7 +51,9 @@
       venueKicker:"आपके स्वागत की प्रतीक्षा रहेगी",venueHeading:"कार्यक्रम स्थल",venueTitle:"चंदेल निवास",
       venueAddress:"ख-103, 593/केएन/103-ए, ग्राम-शकुरपुर, लखनऊ, उत्तर प्रदेश – 226002",
       callButton:"संपर्क करें: +91 9235228454",footerQuote:"आपका स्नेहमयी आगमन एवं आशीर्वाद ही हमारा सबसे बड़ा उपहार है।",
-      footerSignoff:"सादर, चंदेल परिवार"
+      footerSignoff:"सादर, चंदेल परिवार",
+      memoriesKicker:"प्रेम की जड़ें · आशीर्वाद का साथ",memoriesTitle:"परिवार की अनमोल यादें",memoriesIntro:"अपनों के प्रेम और बड़ों के आशीर्वाद से ही घर सुंदर बनता है।",
+      memory1Title:"हमारे बड़े",memory1Text:"अनुभव, प्रार्थनाएँ और आशीर्वाद",memory2Title:"हमारा परिवार",memory2Text:"हर पल साथ और अपनापन",memory3Title:"हमारी आस्था",memory3Text:"भक्ति से आलोकित घर",memory4Title:"नई शुरुआत",memory4Text:"प्रेम, हँसी और नई यादें"
     }
   };
 
