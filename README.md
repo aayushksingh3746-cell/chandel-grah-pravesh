@@ -1,17 +1,17 @@
-# Chandel Family — Royal Griha Pravesh Invitation
+# Chandel Family — Heirloom Invitation
 
-A mobile-first static invitation website built with HTML, CSS and vanilla JavaScript.
+A responsive static invitation website built with HTML, CSS and vanilla JavaScript.
 
-## Included
-- `index.html`, `styles.css`, `script.js`
-- `assets/griha-pravesh-entrance.png` — supplied entrance photograph used in the hero background
+## Project files
+- `index.html` — page structure and metadata
+- `styles.css` — editorial maroon, ivory and antique-gold design, responsive styling and motion
+- `script.js` — bilingual content, countdown, music control and scroll reveals
+- `assets/griha-pravesh-entrance.png` — supplied entrance photograph used as the hero background
 
 ## Optional media
-Add these files to `assets/` if you want the corresponding features:
-- `lord-rama.jpg` — devotional image for the divine blessings panel
-- `devotional-flute.mp3` — optional flute audio (starts only after the visitor taps the music control)
-
-The divine image panel displays a graceful text fallback if `lord-rama.jpg` is not present.
+Add these files to `assets/` if desired:
+- `lord-rama.jpg` — image for the divine blessings panel
+- `devotional-flute.mp3` — optional flute audio, activated only by visitor interaction
 
 ## Deploy
-This is a static website. For Vercel select **Other** as the framework preset and leave Build Command and Install Command empty. Set Output Directory to `.`. Ensure `index.html` is in the deployed root.
+Static site; no npm install or build command is required. On Vercel choose **Other**, leave Build Command and Install Command blank, and set Output Directory to `.`. Ensure `index.html` is at the deployment root.

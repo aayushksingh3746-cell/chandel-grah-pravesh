@@ -53,7 +53,24 @@
   }
   setLanguage(language); updateCountdown(); window.setInterval(updateCountdown,1000);
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }),{threshold:.12});
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), {threshold:.12, rootMargin:'0px 0px -35px 0px'});
     $$('.reveal').forEach(el => observer.observe(el));
-  } else $$('.reveal').forEach(el => el.classList.add('visible'));
+
+    // Let the individual ornaments and event pieces arrive with a quiet stagger.
+    const pieces = $$('.event-card, .birthday-card, .divine-frame, .memory-grid article');
+    const pieceObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const index = pieces.indexOf(entry.target);
+        entry.target.style.setProperty('--arrival-delay', `${(index % 4) * 110}ms`);
+        entry.target.classList.add('piece-visible');
+        pieceObserver.unobserve(entry.target);
+      }
+    }), {threshold:.16});
+    pieces.forEach(el => pieceObserver.observe(el));
+  } else {
+    $$('.reveal').forEach(el => el.classList.add('visible'));
+    $$('.event-card, .birthday-card, .divine-frame, .memory-grid article').forEach(el => el.classList.add('piece-visible'));
+  }
 })();
