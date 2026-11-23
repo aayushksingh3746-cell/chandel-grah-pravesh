@@ -52,6 +52,38 @@
     Object.entries(values).forEach(([key,value]) => $('#'+key).textContent = String(value).padStart(key === 'days' ? 3 : 2,'0'));
   }
   setLanguage(language); updateCountdown(); window.setInterval(updateCountdown,1000);
+
+  // Soft diya-like motes in the hero add atmosphere without distracting from the invitation.
+  const hero = $('.hero');
+  if (hero && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    for (let i = 0; i < 15; i++) {
+      const mote = document.createElement('span');
+      mote.className = 'ambient-particle';
+      mote.setAttribute('aria-hidden', 'true');
+      mote.style.setProperty('--x', `${8 + Math.random() * 84}%`);
+      mote.style.setProperty('--y', `${42 + Math.random() * 48}%`);
+      mote.style.setProperty('--s', `${2 + Math.random() * 2}px`);
+      mote.style.setProperty('--d', `${7 + Math.random() * 8}s`);
+      mote.style.setProperty('--delay', `${Math.random() * 8}s`);
+      mote.style.setProperty('--drift', `${-24 + Math.random() * 48}px`);
+      hero.appendChild(mote);
+    }
+  }
+
+  // Gentle pointer parallax on desktop only; touch layouts remain still and readable.
+  if (hero && window.matchMedia('(pointer:fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    hero.addEventListener('pointermove', (event) => {
+      const bounds = hero.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - .5;
+      const y = (event.clientY - bounds.top) / bounds.height - .5;
+      hero.style.setProperty('--pointer-x', `${x * 7}px`);
+      hero.style.setProperty('--pointer-y', `${y * 5}px`);
+    });
+    hero.addEventListener('pointerleave', () => {
+      hero.style.setProperty('--pointer-x', '0px');
+      hero.style.setProperty('--pointer-y', '0px');
+    });
+  }
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
       if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }

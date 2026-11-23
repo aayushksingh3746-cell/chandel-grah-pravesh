@@ -1,17 +1,19 @@
-# Chandel Family — Heirloom Invitation
+# Chandel Family — Royal Invitation 2027
 
-A responsive static invitation website built with HTML, CSS and vanilla JavaScript.
+A responsive static invitation website for the Chandel Family celebrations on 10–11 March 2027.
 
-## Project files
-- `index.html` — page structure and metadata
-- `styles.css` — editorial maroon, ivory and antique-gold design, responsive styling and motion
-- `script.js` — bilingual content, countdown, music control and scroll reveals
-- `assets/griha-pravesh-entrance.png` — supplied entrance photograph used as the hero background
+## Files
+- `index.html` — page structure and event content
+- `styles.css` — responsive styling, typography, decorative details and motion
+- `script.js` — English/Hindi switching, countdown, music control and subtle reveal effects
+- `assets/griha-pravesh-entrance.png` — supplied hero photograph
 
 ## Optional media
 Add these files to `assets/` if desired:
-- `lord-rama.jpg` — image for the divine blessings panel
-- `devotional-flute.mp3` — optional flute audio, activated only by visitor interaction
+- `lord-rama.jpg` — image in the divine blessings section
+- `devotional-flute.mp3` — optional looping flute audio (starts only after the visitor taps the music control)
 
 ## Deploy
-Static site; no npm install or build command is required. On Vercel choose **Other**, leave Build Command and Install Command blank, and set Output Directory to `.`. Ensure `index.html` is at the deployment root.
+This is a static website. Upload the contents of this folder to the repository root. On Vercel choose **Other** as the framework preset, leave Build Command and Install Command empty, and set Output Directory to `.`. No `package.json` or build step is required.
+
+The countdown uses India Standard Time (UTC+05:30). The displayed event date and details are in `index.html` and `script.js`.
